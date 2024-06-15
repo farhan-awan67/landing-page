@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-image: url(./wallpaper.png);
+  background-size: cover;
+  background-position: center;
+}
+.header {
+  width: 100%;
+}
+.nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 9px 10px;
+}
+.nav .logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(249, 6, 46);
+}
+.data a {
+  color: black;
+  font-size: 20px;
+  margin-right: 10px;
+  letter-spacing: 0.9px;
+  position: relative;
+}
+.data a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  left: 0px;
+  transition: 0.3s;
+}
+a:hover::after {
+  width: 100%;
+}
+
+.section {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+.section .info {
+  width: 50%;
+}
+.info h1 {
+  font-weight: 900;
+  font-size: 38px;
+  width: 100%;
+  margin-bottom: 5px;
+  color: rgb(249, 6, 46);
+}
+.info h2 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.info p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin: 13px 0;
+  line-height: 25px;
+}
+.info button {
+  font-size: 18px;
+  padding: 10px 18px;
+  margin-right: 5px;
+  border: 0.8px solid black;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.social {
+  width: 10%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  padding: 5px 10px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  * {
+    color: white;
+  }
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  #main {
+    background-position: right;
+    background-size: cover;
+  }
+  .section {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: 15px 0;
+  }
+  .info {
+    margin-bottom: 20px;
+  }
+  .info p {
+    font-size: 21px;
+    opacity: 0.9;
+  }
+  .section button {
+    margin-bottom: 9px;
+    padding: 5px 10px;
+  }
+  .section .social {
+    width: 50%;
+    justify-content: space-around;
+    bottom: 5%;
+    top: 95%;
+  }
+}
